@@ -35,3 +35,9 @@ export default function MovieList() {
   );
 }
 
+/*
+A tela MovieList é responsável por exibir a lista de filmes. Ela utiliza o hook useMovies para obter os dados dos filmes e o estado de carregamento. 
+Se os dados ainda estiverem sendo carregados, ela exibe uma mensagem de "Carregando...". 
+Caso contrário, ela renderiza uma FlatList com os filmes, utilizando o componente MovieCard para exibir cada filme individualmente. 
+Quando um usuário toca em um card de filme, a função onPress é chamada, navegando para a tela de detalhes do filme (ROUTES.MOVIE_DETAILS) e passando as informações do filme selecionado como parâmetro.
+*/
