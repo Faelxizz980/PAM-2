@@ -1,20 +1,13 @@
-import React from "react";
-import { View, Text, Image } from "react-native";
-import styles from "./styles";
+import React from 'react';
+import { View, Text, Image } from 'react-native';
+import { styles } from './styles.js';
 
-export default function ActorCard() {
+export default function ActorCard({ ator }) {
     return (
-        <View>
-            <Image
-                source={{ uri: movie.imagem }}
-                style={styles.image}
-            />
-            <Text style={styles.title}>
-                {movie.nome}
-            </Text>
-            <Text style={styles.year}>
-                {movie.ano}
-            </Text>
+        <View style={styles.container}>
+            <Image source={{ uri: ator.imagem }} style={styles.photo} />
+            <Text style={styles.name}>{ator.nome}</Text>
+            <Text style={styles.character}>{ator.personagem}</Text>
         </View>
     );
 }

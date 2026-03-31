@@ -1,9 +1,10 @@
 import React from "react";
-import { View, FlatList, Text } from "react-native";
+import { View, FlatList, Text, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useMovies } from "../../hooks/useMovies";
 import MovieCard from "../../components/MovieCard";
 import { ROUTES } from "../../../../constants/routes";
+import styles from "../../components/MovieCard/styles";
 
 export default function MovieList() {
   const { movies, loading } = useMovies();
@@ -12,7 +13,7 @@ export default function MovieList() {
   if (loading) { return <Text>Carregando...</Text>;}
 
   return (
-    <View style={{ padding: 16, flex: 1 }}>
+    <ScrollView style={styles.container}>
       <FlatList
         style={{ flex: 1 }}
         data={movies}
@@ -31,7 +32,7 @@ export default function MovieList() {
           />
         )}
       />
-    </View>
+    </ScrollView>
   );
 }
 

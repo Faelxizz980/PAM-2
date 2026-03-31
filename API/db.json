@@ -11,13 +11,25 @@
           "id": 1,
           "nome": "Leonardo DiCaprio",
           "personagem": "Jack Dawson",
-          "imagem": "https://upload.wikimedia.org/wikipedia/commons/4/46/Leonardo_DiCaprio_2014.jpg"
+          "imagem": "https://media.themoviedb.org/t/p/w300_and_h450_face/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg"
         },
         {
           "id": 2,
           "nome": "Kate Winslet",
           "personagem": "Rose DeWitt Bukater",
-          "imagem": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Kate_Winslet_2018.jpg"
+          "imagem": "https://media.themoviedb.org/t/p/w300_and_h450_face/e3tdop3WhseRnn8KwMVLAV25Ybv.jpg"
+        },
+        {
+          "id": 1,
+          "nome": "Leonardo DiCaprio",
+          "personagem": "Jack Dawson",
+          "imagem": "https://media.themoviedb.org/t/p/w300_and_h450_face/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg"
+        },
+        {
+          "id": 2,
+          "nome": "Kate Winslet",
+          "personagem": "Rose DeWitt Bukater",
+          "imagem": "https://media.themoviedb.org/t/p/w300_and_h450_face/e3tdop3WhseRnn8KwMVLAV25Ybv.jpg"
         }
       ]
     },
@@ -26,19 +38,25 @@
       "nome": "The Dark Knight",
       "img_capa": "https://upload.wikimedia.org/wikipedia/pt/d/d1/The_Dark_Knight.jpg",
       "ano": "2008",
-      "sinopse": "Batman enfrenta o Coringa, um criminoso caótico que ameaça mergulhar Gotham City na anarquia e testar os limites morais do herói.",
+      "sinopse": "Batman tem conseguido manter a ordem em Gotham com a ajuda de Jim Gordon e Harvey Dent. No entanto, um jovem e anárquico criminoso, conhecido apenas como Coringa, pretende testar o Cavaleiro das Trevas e mergulhar a cidade em caos.",
       "elenco": [
         {
           "id": 1,
           "nome": "Christian Bale",
           "personagem": "Bruce Wayne / Batman",
-          "imagem": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Christian_Bale-7834.jpg"
+          "imagem": "https://media.themoviedb.org/t/p/w300_and_h450_face/7Pxez9J8fuPd2Mn9kex13YALrCQ.jpg"
         },
         {
           "id": 2,
           "nome": "Heath Ledger",
           "personagem": "Coringa",
-          "imagem": "https://upload.wikimedia.org/wikipedia/commons/7/75/Heath_Ledger.jpg"
+          "imagem": "https://media.themoviedb.org/t/p/w300_and_h450_face/AdWKVqyWpkYSfKE5Gb2qn8JzHni.jpg"
+        },
+        {
+          "id": 3,
+          "nome": "Aaron Eckhart",
+          "personagem": "Harvey Dent",
+          "imagem": "https://media.themoviedb.org/t/p/w300_and_h450_face/u5JjnRMr9zKEVvOP7k3F6gdcwT6.jpg"
         }
       ]
     },
@@ -53,13 +71,13 @@
           "id": 1,
           "nome": "Robert Downey Jr.",
           "personagem": "Tony Stark / Homem de Ferro",
-          "imagem": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Robert_Downey_Jr_2014_Comic_Con.jpg"
+          "imagem": "https://media.themoviedb.org/t/p/w300_and_h450_face/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg"
         },
         {
           "id": 2,
           "nome": "Chris Evans",
           "personagem": "Steve Rogers / Capitão América",
-          "imagem": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Chris_Evans_SDCC_2014.jpg"
+          "imagem": "https://media.themoviedb.org/t/p/w300_and_h450_face/jEzGktEMdEkQKemPVR0YGlIYEVl.jpg"
         }
       ]
     },
@@ -74,13 +92,13 @@
           "id": 1,
           "nome": "Leonardo DiCaprio",
           "personagem": "Dom Cobb",
-          "imagem": "https://upload.wikimedia.org/wikipedia/commons/4/46/Leonardo_DiCaprio_2014.jpg"
+          "imagem": "https://media.themoviedb.org/t/p/w300_and_h450_face/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg"
         },
         {
           "id": 2,
           "nome": "Joseph Gordon-Levitt",
           "personagem": "Arthur",
-          "imagem": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Joseph_Gordon-Levitt_SDCC_2012.jpg"
+          "imagem": "https://media.themoviedb.org/t/p/w300_and_h450_face/z2FA8js799xqtfiFjBTicFYdfk.jpg"
         }
       ]
     }
