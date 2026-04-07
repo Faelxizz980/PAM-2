@@ -39,12 +39,14 @@ export const styles = StyleSheet.create({
         padding:6,
         alignItems:"center",
         borderRadius:20,
-        width:"40%"
+        width:"70%",
+        boxShadow:"0 0 30px #0a0a4eff"
     },
     boxelenco:{
         padding:6,
         alignItems:"center",
         borderRadius:20,
+
 
     }
 });
