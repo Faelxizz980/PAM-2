@@ -1,40 +1,43 @@
 import React from "react";
-import { View, Text, Image, FlatList, ScrollView } from "react-native-web";
+import { View, Text, Image, ScrollView, FlatList } from "react-native-web";
+import { useElencoMovie } from "../../hooks/useMovies";
 import ActorCard from "../../components/ActorCard";
-import { styles } from "./styles.js";
+import { useRoute } from "@react-navigation/native";
+import styles from './styles'
 
-export default function MovieDetails({ route }) {
-    const { movie } = route.params;
 
-    return (
-        <ScrollView contentContainerStyle={styles.container}>
-            <Text style={styles.title}>{movie.nome}</Text>
-            <Image source={{ uri: movie.img_capa }} style={styles.poster} />
-            <View style={styles.boxsinopse}>
-                <Text style={styles.subtitle}>Sinopse:</Text>
-                <Text style={styles.synopsis}>{movie.sinopse}</Text>
-            </View>
+export default function MovieDetails(){
+    const route = useRoute();
+    const {movie} = route.params;
+    const {elenco} =useElencoMovie(movie.id);
+    console.log(movie)
+    return(
+        <ScrollView style={styles.container}>
 
-            <Text style={[styles.subtitle, {textAlign: 'center'}]}>Elenco</Text>
-            {movie.elenco ? (
-                <View style={styles.boxelenco}>
-                    <FlatList
-                        style={{ flex: 1 }}
-                        data={movie.elenco}
-                        keyExtractor={(item) => item.id.toString()}
-                        numColumns={2}
-                        columnWrapperStyle={{ justifyContent: 'space-around' }}
-                        renderItem={({ item }) => (
-                            <ActorCard
-                            ator={item}
-                            />
-                        )}
-                        />
-                </View>
-            ) : (
-                <Text>Elenco não disponível</Text>
-            )
-        }
+            <Image
+            source={{uri: movie.img_capa}}
+            style={styles.image}
+            />
+
+            <Text style={styles.title}>
+            {movie.nome}
+            </Text>
+
+            <Text style={styles.year}>
+            {movie.ano}
+            </Text>
+
+            <Text style={styles.descricao}>
+            {movie.sinopse}
+            </Text>
+
+            <FlatList
+            data={elenco}
+            horizontal
+            keyExtractor={(item) => item.id.toString()}
+            renderItem={({item}) => <ActorCard actor={item}/>}
+            />
+
         </ScrollView>
     );
 }
