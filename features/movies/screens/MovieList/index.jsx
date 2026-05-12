@@ -1,38 +1,57 @@
 import React from "react";
-import { View, FlatList, Text, ScrollView } from "react-native";
+import { View, FlatList, useWindowDimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useMovies } from "../../hooks/useMovies";
 import MovieCard from "../../components/MovieCard";
+import Loading from "../../../../components/Loading";
 import { ROUTES } from "../../../../constants/routes";
-import styles from "../../components/MovieCard/styles";
 
 export default function MovieList() {
   const { movies, loading } = useMovies();
   const navigation = useNavigation();
+  const {width} = useWindowDimensions();
 
-  if (loading) { return <Text>Carregando...</Text>;}
+  let wFL = '15vw'
+  let c = 6
+
+  if(width.toFixed(2) <= 425 ){
+    c = 2,
+    wFL = '45vw'
+  }
+  else if(width.toFixed(2) <= 768){
+    c = 4,
+    wFL = '22vw'
+  }
+  else{
+    c = 6,
+    wFL = '15vw'
+  }
+
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
-    <ScrollView style={styles.container}>
+    <View style={{ padding: 16, flex: 1 }}>
       <FlatList
         style={{ flex: 1 }}
         data={movies}
         keyExtractor={(item) => item.id.toString()}
-        numColumns={2}
+        numColumns={c}
+        keyString ={c}
         columnWrapperStyle={{ justifyContent: "space-around" }}
         renderItem={({ item }) => (
           <MovieCard
             movie={item}
             onPress={() =>
-              navigation.navigate(ROUTES.MOVIE_DETAILS, {
-                movie: item,
-              })
+              navigation.navigate(ROUTES.MOVIE_DETAILS, {movie_id: item.id})
             }
-            width={"45vw"}
+            width={wFL}
           />
         )}
       />
-    </ScrollView>
+    </View>
   );
 }
 
